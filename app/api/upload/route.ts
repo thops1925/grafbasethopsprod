@@ -26,6 +26,7 @@ export async function POST(request: Request) {
         const result = await cloudinary.uploader.upload(path, options);
 
         return NextResponse.json(result, { status: 200 });
+
     } catch (error) {
         return NextResponse.json({ message: "Failed to upload image on Cloudinary" }, { status: 500 });
     }
