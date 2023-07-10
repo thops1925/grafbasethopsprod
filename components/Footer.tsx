@@ -1,5 +1,5 @@
 import { footerLinks } from "@/constant";
-import FooterCol from "@/utils/FooterCol";
+import FooterCol from "@/components/FooterCol";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
