@@ -24,6 +24,7 @@ const Button = ({
 }: Props) => (
 
   <button
+    key={title}
     type={type || 'button'}
     disabled={submitting || false}
     className={`flex items-center justify-center gap-3 px-4 py-3 

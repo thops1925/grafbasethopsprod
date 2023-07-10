@@ -4,7 +4,6 @@ import React from 'react'
 
 type Props = {
     id: string;
-    key: string;
     image: string;
     name: string;
     avatarUrl: string;
@@ -12,9 +11,9 @@ type Props = {
     title: string;
 }
 
-const ProjectCard = ({ id, key, image, name, avatarUrl, userId, title }: Props) => {
+const ProjectCard = ({ id, image, name, avatarUrl, userId, title }: Props) => {
     return (
-        <div className='flex items-center justify-center flex-col rounded-sm drop-shadow-md' key={key}>
+        <section className='flex items-center justify-center flex-col rounded-sm drop-shadow-md' key={id}>
             <Link
                 href={`/project/${id}`}
                 className='flex items-center justify-center group relative w-full h-full'>
@@ -68,7 +67,7 @@ const ProjectCard = ({ id, key, image, name, avatarUrl, userId, title }: Props) 
                     </div> */}
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
