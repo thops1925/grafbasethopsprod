@@ -35,12 +35,21 @@ const RelatedProjects = async ({ userId, projectId }: Props) => {
             <div className="grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 mt-5">
                 {filteredProjects?.map(({ node }: { node: ProjectInterface }) => (
                     <div className="flex items-center justify-center flex-col rounded-2xl min-w-[210px] min-h-[197px]  drop-shadow-card">
-                        <Link href={`/project/${node?.id}`} className="flex items-center justify-center group relative w-full h-full">
-                            <Image src={node?.image} width={414} height={314} className="w-full h-full object-cover rounded-2xl" alt="project image" />
+                        <Link
+                            href={`/project/${node?.id}`}
+                            className="flex items-center justify-center group relative w-full h-full">
+                            <Image
+                                src={node?.image}
+                                width={414}
+                                height={314}
+                                className="w-full h-full object-cover rounded-2xl" alt="project image" />
 
                             <div className="hidden group-hover:flex  justify-end items-end w-full h-1/3 bg-gradient-to-b from-transparent
                              to-black/50 rounded-b-2xl gap-2 absolute bottom-0 right-0 font-semibold text-lg text-white p-4">
-                                <p className="w-full">{node?.title}</p>
+                                <p
+                                    className="w-full">
+                                    {node?.title}
+                                </p>
                             </div>
                         </Link>
                     </div>
