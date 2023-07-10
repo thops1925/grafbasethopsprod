@@ -12,7 +12,17 @@ type Props = {
   textColor?: string
 }
 
-const Button = ({ title, leftIcon, rightIcon, handleClick, submitting, type, bgColor, textColor }: Props) => (
+const Button = ({
+  title,
+  leftIcon,
+  rightIcon,
+  handleClick,
+  submitting,
+  type,
+  bgColor,
+  textColor
+}: Props) => (
+
   <button
     type={type || 'button'}
     disabled={submitting || false}
@@ -21,9 +31,23 @@ const Button = ({ title, leftIcon, rightIcon, handleClick, submitting, type, bgC
         ${submitting ? 'bg-black/50' : bgColor ? bgColor : 'bg-sky-600'} rounded-xl text-sm font-medium max-md:w-full`}
     onClick={handleClick}
   >
-    {leftIcon && <Image src={leftIcon} width={14} height={14} alt="left icon" />}
+    {leftIcon &&
+      <Image
+        src={leftIcon}
+        width={14}
+        height={14}
+        alt="left icon"
+      />}
+
     {title}
-    {rightIcon && <Image src={rightIcon} width={14} height={14} alt="right icon" />}
+
+    {rightIcon &&
+      <Image
+        src={rightIcon}
+        width={14}
+        height={14}
+        alt="right icon"
+      />}
   </button>
 )
 
