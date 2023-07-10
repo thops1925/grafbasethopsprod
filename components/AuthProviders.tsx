@@ -31,7 +31,6 @@ const AuthProviders = () => {
           <Button
             type='button'
             title='Sign In'
-            key={i}
             handleClick={() => signIn(provider?.id)} />
         ))}
       </div>

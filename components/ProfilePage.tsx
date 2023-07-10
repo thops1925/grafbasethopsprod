@@ -56,7 +56,6 @@ const ProfilePage = ({ user }: Props) => (
                 {user?.projects?.edges?.map(
                     ({ node }: { node: ProjectInterface }) => (
                         <ProjectCard
-                            key={`${node?.id}`}
                             id={node?.id}
                             image={node?.image}
                             title={node?.title}
