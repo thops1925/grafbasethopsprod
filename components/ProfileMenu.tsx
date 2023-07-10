@@ -15,7 +15,9 @@ const ProfileMenu = ({ session }: { session: SessionInterface }) => {
     return (
         <div className="flex items-center justify-center z-10 flex-col relative">
             <Menu as="div">
-                <Menu.Button className="flex items-center justify-center" onClick={() => setOpenModal(!openModal)} >
+                <Menu.Button
+                    className="flex items-center justify-center"
+                    onClick={() => setOpenModal(!openModal)} >
                     {session?.user?.image && (
                         <Image
                             src={session.user.image}
@@ -57,18 +59,27 @@ const ProfileMenu = ({ session }: { session: SessionInterface }) => {
 
                         <div className="flex flex-col gap-3 pt-10 items-start w-full">
                             <Menu.Item>
-                                <Link href={`/profile/${session?.user?.id}`} className="text-sm">Work Preferences</Link>
+                                <Link
+                                    href={`/profile/${session?.user?.id}`}
+                                    className="text-sm">Work Preferences</Link>
                             </Menu.Item>
                             <Menu.Item>
-                                <Link href={`/profile/${session?.user?.id}`} className="text-sm">Settings</Link>
+                                <Link
+                                    href={`/profile/${session?.user?.id}`}
+                                    className="text-sm">Settings</Link>
                             </Menu.Item>
                             <Menu.Item>
-                                <Link href={`/profile/${session?.user?.id}`} className="text-sm">Profile</Link>
+                                <Link
+                                    href={`/profile/${session?.user?.id}`}
+                                    className="text-sm">Profile</Link>
                             </Menu.Item>
                         </div>
                         <div className="w-full flex items-start justify-start border-t border-nav-border mt-5 pt-5">
                             <Menu.Item>
-                                <Button title=' Sign Out' type="button" handleClick={() => signOut()} />
+                                <Button
+                                    title=' Sign Out'
+                                    type="button"
+                                    handleClick={() => signOut()} />
                             </Menu.Item>
                         </div>
                     </Menu.Items>
