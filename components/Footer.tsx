@@ -13,7 +13,7 @@ export const Footer = () => {
             alt="logo"
             width={116}
             height={43}
-            className="blur-none"
+            className="blur-none min-h-min min-w-min"
           />
           <p className="text-start text-sm font-normal mt-5 max-w-sm mx-4">
             "Unlocking the Power of Sharing: Join the Online Revolution of Community Collaboration"

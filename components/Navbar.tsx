@@ -19,7 +19,8 @@ const Navbar = async () => {
             alt="logo"
             width={116}
             height={43}
-            className="blur-none"
+            className="blur-none min-h-min min-w-min"
+
           />
         </Link>
 
