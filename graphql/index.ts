@@ -119,7 +119,8 @@ export const getUserQuery = `
 `;
 
 export const getProjectsOfUserQuery = `
-  query getUserProjects($id: ID!, $last: Int = 4) {
+  query getUserProjects($id: ID!, $last: Int = 4) 
+  {
     user(by: { id: $id }) {
       id
       name
@@ -140,3 +141,4 @@ export const getProjectsOfUserQuery = `
     }
   }
 `;
+
