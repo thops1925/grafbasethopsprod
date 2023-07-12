@@ -1,4 +1,4 @@
-import { ProjectInterface } from '@/common'
+import { ProjectInterface } from '@/common.types'
 import Modal from '@/components/Modal'
 import ProjectActions from '@/components/ProjectActions'
 import RelatedProjects from '@/components/RelatedProjects'

@@ -1,5 +1,5 @@
 "use client"
-import { ProjectInterface, SessionInterface } from "@/common"
+import { ProjectInterface, SessionInterface } from "@/common.types"
 import Image from "next/image"
 import { ChangeEvent, useState } from "react"
 import FormField from "./FormField"

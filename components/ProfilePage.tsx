@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Button from "./Button";
 import ProjectCard from './ProjectCard';
-import { ProjectInterface, UserProfile } from '@/common';
+import { ProjectInterface, UserProfile } from '@/common.types';
 
 type Props = {
     user: UserProfile;
