@@ -58,6 +58,7 @@ const Home = async ({ searchParams: { category, endcursor } }: Props) => {
         className="grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 mt-10 w-full">
         {projectsToDisplay.map(({ node }: { node: ProjectInterface }) => (
           <ProjectCard
+            key={node.id}
             id={node?.id}
             image={node?.image}
             title={node?.title}

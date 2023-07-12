@@ -67,6 +67,7 @@ const ProfilePage = ({ user }: Props) => (
                     ({ node }: { node: ProjectInterface }) => (
                         <ProjectCard
                             id={node?.id}
+                            key={node.id}
                             image={node?.image}
                             title={node?.title}
                             name={user.name}

@@ -26,7 +26,9 @@ const Navbar = async () => {
 
         <ul className="text-small hidden gap-7 xl:flex">
           {NavLinks.map((link) => (
-            <Link href={link.href} key={link.key}>
+            <Link
+              href={link.href}
+              key={link.key}>
               {link.text}
             </Link>
           ))}
