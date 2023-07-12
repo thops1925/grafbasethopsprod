@@ -33,9 +33,15 @@ const ProjectActions = ({ projectId }: Props) => {
     }
     return (
         <>
-            <Link href={`/edit-project/${projectId}`} className="flex items-center justify-center 
+            <Link
+                href={`/edit-project/${projectId}`}
+                className="flex items-center justify-center 
              p-3 text-gray-100 bg-light-white-400 rounded-lg text-sm font-medium">
-                <Image src="/pencile.svg" width={15} height={15} alt="edit" />
+                <Image
+                    src="/pencile.svg"
+                    width={15}
+                    height={15}
+                    alt="edit" />
             </Link>
 
             <button
@@ -45,7 +51,11 @@ const ProjectActions = ({ projectId }: Props) => {
                 rounded-lg text-sm font-medium ${isDeleting ? "bg-gray" : "bg-sky-500"}`}
                 onClick={handleDeleteProject}
             >
-                <Image src="/trash.svg" width={15} height={15} alt="delete" />
+                <Image
+                    src="/trash.svg"
+                    width={15}
+                    height={15}
+                    alt="delete" />
             </button>
         </>
     )

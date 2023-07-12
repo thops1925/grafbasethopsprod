@@ -13,7 +13,7 @@ type Props = {
 
 const ProjectCard = ({ id, image, name, avatarUrl, userId, title }: Props) => {
     return (
-        <div className='flex items-center justify-center flex-col rounded-sm drop-shadow-md' key={id}>
+        <div className='flex items-center justify-center flex-col rounded-sm drop-shadow-md'>
             <Link
                 href={`/project/${id}`}
                 className='flex items-center justify-center group relative w-full h-full'>

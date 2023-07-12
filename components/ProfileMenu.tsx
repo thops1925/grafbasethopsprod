@@ -41,7 +41,8 @@ const ProfileMenu = ({ session }: { session: SessionInterface }) => {
                 >
                     <Menu.Items
                         static
-                        className="flex items-start justify-start flex-col absolute right-1/2 translate-x-1/2 mt-6 p-7 sm:min-w-[300px] min-w-max rounded-xl bg-white border border-nav-border shadow-menu "
+                        className="flex items-start justify-start flex-col absolute right-1/2 translate-x-1/2 mt-6 p-7 sm:min-w-[300px] min-w-max
+                         rounded-xl bg-white border border-nav-border shadow-menu"
                         onMouseLeave={() => setOpenModal(!openModal)}
                     >
                         <div className="flex flex-col items-center gap-y-4">
@@ -54,7 +55,9 @@ const ProfileMenu = ({ session }: { session: SessionInterface }) => {
                                     alt="profile Image"
                                 />
                             )}
-                            <p className="font-semibold">{session?.user?.name}</p>
+                            <p className="font-semibold">
+                                {session?.user?.name}
+                            </p>
                         </div>
 
                         <div className="flex flex-col gap-3 pt-10 items-start w-full">
@@ -66,12 +69,16 @@ const ProfileMenu = ({ session }: { session: SessionInterface }) => {
                             <Menu.Item>
                                 <Link
                                     href={`/profile/${session?.user?.id}`}
-                                    className="text-sm">Settings</Link>
+                                    className="text-sm">
+                                    Settings
+                                </Link>
                             </Menu.Item>
                             <Menu.Item>
                                 <Link
                                     href={`/profile/${session?.user?.id}`}
-                                    className="text-sm">Profile</Link>
+                                    className="text-sm">
+                                    Profile
+                                </Link>
                             </Menu.Item>
                         </div>
                         <div className="w-full flex items-start justify-start border-t border-nav-border mt-5 pt-5">

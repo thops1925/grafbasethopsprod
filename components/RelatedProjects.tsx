@@ -22,7 +22,8 @@ const RelatedProjects = async ({ userId, projectId }: Props) => {
         <section className="flex flex-col mt-32 w-full">
             <div className="flex justify-between">
                 <p className="text-base font-bold">
-                    More by {result?.user?.name}
+                    More by
+                    {result?.user?.name}
                 </p>
                 <Link
                     href={`/profile/${result?.user?.id}`}

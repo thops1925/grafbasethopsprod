@@ -13,9 +13,17 @@ const ProfilePage = ({ user }: Props) => (
     <section className='flex items-center justify-center flex-col max-w-10xl w-full mx-auto lg:px-20 py-6 px-5'>
         <section className="flex justify-between max-lg:flex-col gap-10 w-full">
             <div className='flex items-start flex-col w-full'>
-                <Image src={user?.avatarUrl} width={100} height={100} className="rounded-full" alt="user image" />
-                <p className="text-4xl font-bold mt-10">{user?.name}</p>
-                <p className="md:text-5xl text-3xl font-extrabold md:mt-10 mt-5 max-w-lg">I’m Software Engineer 👋</p>
+                <Image
+                    src={user?.avatarUrl}
+                    width={100} height={100}
+                    className="rounded-full"
+                    alt="user image" />
+                <p className="text-4xl font-bold mt-10">
+                    {user?.name}
+                </p>
+                <p className="md:text-5xl text-3xl font-extrabold md:mt-10 mt-5 max-w-lg">
+                    I’m Software Engineer 👋
+                </p>
 
                 <div className="flex mt-8 gap-5 w-full flex-wrap">
                     <Button
@@ -25,7 +33,9 @@ const ProfilePage = ({ user }: Props) => (
                         textColor="text-black-100"
                     />
                     <Link href={`mailto:${user?.email}`}>
-                        <Button title="Hire Me" leftIcon="/email.svg" />
+                        <Button
+                            title="Hire Me"
+                            leftIcon="/email.svg" />
                     </Link>
                 </div>
             </div>

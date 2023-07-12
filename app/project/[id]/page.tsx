@@ -34,14 +34,22 @@ const Project = async ({ params: { id } }: { params: { id: string } }) => {
                         />
                     </Link>
                     <div className='flex-1 flex items-start justify-start flex-col gap-1'>
-                        <p className='self-start text-lg font-semibold'>{projectDetails.title}</p>
+                        <p className='self-start text-lg font-semibold'>
+                            {projectDetails.title}
+                        </p>
                         <div className='flex flex-wrap whitespace-nowrap text-sm font-normal gap-2 w-full'>
-                            <Link href={renderLink()}>
+                            <Link
+                                href={renderLink()}>
                                 {projectDetails.createdBy?.name}
                             </Link>
-                            <Image src="/dot.svg" width={4} height={4} alt="dot" />
+                            <Image
+                                src="/dot.svg"
+                                width={4}
+                                height={4}
+                                alt="dot" />
 
-                            <Link href={`/?category=${projectDetails.category}`}
+                            <Link
+                                href={`/?category=${projectDetails.category}`}
                                 className="text-sky-500 font-semibold">
                                 {projectDetails?.category}
                             </Link>
@@ -52,7 +60,8 @@ const Project = async ({ params: { id } }: { params: { id: string } }) => {
                 {/* show if your the user */}
                 {session?.user?.email === projectDetails?.createdBy?.email && (
                     <div className="flex justify-end items-center gap-2">
-                        <ProjectActions projectId={projectDetails?.id} />
+                        <ProjectActions
+                            projectId={projectDetails?.id} />
                     </div>
                 )}
             </section>
@@ -87,9 +96,11 @@ const Project = async ({ params: { id } }: { params: { id: string } }) => {
                 </div>
             </section>
 
-            <section className="flex items-center justify-center     w-full gap-8 mt-28">
+            <section className="flex items-center justify-center w-full gap-8 mt-28">
                 <span className="w-full h-0.5 bg-light-white-200" />
-                <Link href={renderLink()} className="min-w-[82px] h-[82px]">
+                <Link
+                    href={renderLink()}
+                    className="min-w-[82px] h-[82px]">
                     <Image
                         src={projectDetails?.createdBy?.avatarUrl}
                         className="rounded-full"
