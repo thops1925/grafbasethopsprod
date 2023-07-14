@@ -30,8 +30,7 @@ const Project = async ({ params: { id } }: { params: { id: string } }) => {
                             width={50}
                             height={50}
                             alt="profile"
-                            className="rounded-full border-2 border-sky-500 "
-                        />
+                            className="rounded-full border-2 border-sky-500 " />
                     </Link>
                     <div className='flex-1 flex items-start justify-start flex-col gap-1'>
                         <p className='self-start text-lg font-semibold'>{projectDetails.title}</p>
