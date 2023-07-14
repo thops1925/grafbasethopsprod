@@ -20,7 +20,13 @@ const LoadMore = ({ startCursor, endCursor, hasPreviousPage, hasNextPage }: Prop
         if ((type === "prev" && hasPreviousPage) || (type === "next" && hasNextPage)) {
             currentParams.delete("endcursor");
             currentParams.delete("startcursor");
-            currentParams.set(type === "prev" ? "startcursor" : "endcursor", type === "prev" ? startCursor : endCursor);
+            currentParams.set(
+                type === "prev"
+                    ? "startcursor"
+                    : "endcursor",
+                type === "prev"
+                    ? startCursor
+                    : endCursor);
 
             const newSearchParams = currentParams.toString();
             const newPathname = `${window.location.pathname}?${newSearchParams}`;

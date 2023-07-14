@@ -125,10 +125,16 @@ const ProjectForm = ({ type, session, project }: Props) => {
             />
             <Button
                 title={isSubmitting ?
-                    `${type === 'create' ? 'Creating' : 'Editing'}`
-                    : `${type === 'create' ? 'Create ' : 'Edit'}`}
+                    `${type === 'create'
+                        ? 'Creating'
+                        : 'Editing'}`
+                    : `${type === 'create'
+                        ? 'Create '
+                        : 'Edit'}`}
                 type="submit"
-                leftIcon={isSubmitting ? '' : '/plus.svg'}
+                leftIcon={isSubmitting
+                    ? ''
+                    : '/plus.svg'}
                 submitting={isSubmitting} />
         </form>
     )
