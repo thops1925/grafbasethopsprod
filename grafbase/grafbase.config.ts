@@ -1,4 +1,8 @@
-import { g, auth, config } from '@grafbase/sdk'
+import {
+  g,
+  auth,
+  config
+} from '@grafbase/sdk'
 
 // @ts-ignore
 const User = g.model('User', {
@@ -31,7 +35,6 @@ const jwt = auth.JWT({
   issuer: 'grafbase',
   secret: g.env('NEXTAUTH_SECRET')
 })
-
 
 export default config({
   schema: g,
