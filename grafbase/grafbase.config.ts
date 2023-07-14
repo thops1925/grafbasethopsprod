@@ -23,6 +23,7 @@ const User = g.model('User', {
   projects: g.relation(() => Project).list().optional(),
 }).auth((rules) => rules.public().read())
 
+
 // @ts-ignore
 const Project = g.model('Project', {
   title: g.string().length({ min: 3 }),
@@ -39,7 +40,7 @@ const Project = g.model('Project', {
 })
 
 const jwt = auth.JWT({
-  issuer: 'grafbase',
+  issuer: 'https://grafbase.com',
   secret: g.env('NEXTAUTH_SECRET')
 })
 
