@@ -11,8 +11,8 @@ import { SessionInterface, UserProfile } from "@/common.types";
 export const authOptions: NextAuthOptions = {
   providers: [
     GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID!,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+      clientId: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID!,
+      clientSecret: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_SECRET!,
     }),
   ],
   jwt: {
@@ -35,7 +35,7 @@ export const authOptions: NextAuthOptions = {
   },
   theme: {
     colorScheme: "light",
-    logo: "/logo.svg",
+    logo: "/thops2.png",
   },
   callbacks: {
     async session({ session }) {
